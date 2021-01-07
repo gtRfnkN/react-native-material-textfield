@@ -84,7 +84,7 @@ export default class Label extends PureComponent {
       color,
     };
 
-    let { x0, y0, x1, y1 } = offset;
+    let { y0, y1 } = offset;
 
     y0 += activeFontSize;
     y0 += contentInset.label;
@@ -100,11 +100,6 @@ export default class Label extends PureComponent {
         translateY: labelAnimation.interpolate({
           inputRange: [0, 1],
           outputRange: [y0, y1],
-        }),
-      }, {
-        translateX: labelAnimation.interpolate({
-          inputRange: [0, 1],
-          outputRange: [x0, x1],
         }),
       }],
     };
